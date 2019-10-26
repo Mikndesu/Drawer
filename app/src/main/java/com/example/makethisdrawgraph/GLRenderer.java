@@ -45,7 +45,7 @@ public class GLRenderer implements GLSurfaceView.Renderer {
 
         float[] points = Expression_Dealer.toArray(p);
 
-        GLES20.glClearColor(1.0f, 1.0f, 1.0f, 1);
+        GLES20.glClearColor(MainActivity.color, MainActivity.color, MainActivity.color, 1);
         GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT | GLES20.GL_DEPTH_BUFFER_BIT);
         FloatBuffer vpos = BufferUtil.convertx(
                 points
