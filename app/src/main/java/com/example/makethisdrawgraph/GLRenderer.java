@@ -40,12 +40,12 @@ public class GLRenderer implements GLSurfaceView.Renderer {
         for(int i = -1000; i < 1001; i++) {
             float f = (float)i * 0.001f;
             p.add(f);
-            p.add((f * 1) + 0);
+            p.add((f * MainActivity.number) + 0);
         }
 
         float[] points = Expression_Dealer.toArray(p);
 
-        GLES20.glClearColor(MainActivity.color, MainActivity.color, MainActivity.color, 1);
+        GLES20.glClearColor(1.0f, 1.0f, 1.0f, 1);
         GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT | GLES20.GL_DEPTH_BUFFER_BIT);
         FloatBuffer vpos = BufferUtil.convertx(
                 points

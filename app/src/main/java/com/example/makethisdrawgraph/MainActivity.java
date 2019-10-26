@@ -3,16 +3,15 @@ package com.example.makethisdrawgraph;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.opengl.GLES20;
 import android.opengl.GLSurfaceView;
 import android.os.Bundle;
 import android.widget.Button;
 
-import java.util.Scanner;
-
 public class MainActivity extends AppCompatActivity {
 
     private GLSurfaceView glSurfaceView;
-    public static float color = 1.0f;
+    public static int number = 1;
     private Button changer;
 
     public static String expression;
@@ -28,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         glSurfaceView.setRenderMode(GLSurfaceView.RENDERMODE_CONTINUOUSLY);
 
         changer = findViewById(R.id.changer);
-        changer.setOnClickListener((v) -> {color = color - 1.0f;});
+        changer.setOnClickListener((v) -> {number = number + 1;});
 
 //        Intent intent = getIntent();
 //        expression = intent.getStringExtra("expression");
