@@ -2,8 +2,6 @@ package com.example.makethisdrawgraph;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
-import android.opengl.GLES20;
 import android.opengl.GLSurfaceView;
 import android.os.Bundle;
 import android.widget.Button;
@@ -27,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         glSurfaceView.setRenderMode(GLSurfaceView.RENDERMODE_CONTINUOUSLY);
 
         changer = findViewById(R.id.changer);
-        changer.setOnClickListener((v) -> {number = number + 1;});
+        changer.setOnClickListener((v)->{});
 
 //        Intent intent = getIntent();
 //        expression = intent.getStringExtra("expression");

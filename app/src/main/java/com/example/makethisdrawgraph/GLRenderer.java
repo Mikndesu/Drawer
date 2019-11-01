@@ -38,20 +38,20 @@ public class GLRenderer implements GLSurfaceView.Renderer {
         ArrayList<Float> p = new ArrayList<>();
 
         for(int i = -1000; i < 1001; i++) {
-            float f = (float)i * 0.001f;
+            float f = (float)i * 0.005f;
             p.add(f);
-            p.add((f * MainActivity.number) + 0);
+            p.add((f * (float)MainActivity.number) + 1);
         }
 
         float[] points = Expression_Dealer.toArray(p);
 
-        GLES20.glClearColor(1.0f, 1.0f, 1.0f, 1);
+        GLES20.glClearColor(0.839f, 0.776f, 0.686f, 1.0f);
         GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT | GLES20.GL_DEPTH_BUFFER_BIT);
         FloatBuffer vpos = BufferUtil.convertx(
-                points
+                0.0f, 0.5f, -0.5f, -0.5f, 0.5f, -0.5f
         );
         FloatBuffer fcol = BufferUtil.convertx(1.0f, 0.0f, 0.0f, 1.0f);
-        GLES20.glLineWidth(2);
+        GLES20.glLineWidth(16.0f);
         drawing.draw(fcol, vpos);
     }
 }

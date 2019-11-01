@@ -67,7 +67,7 @@ public class Drawing {
         GLES20.glVertexAttribPointer
                 (vposx, 2, GLES20.GL_FLOAT, false, 0, vpos);
 
-        GLES20.glDrawArrays(GLES20.GL_POINTS, 0, vpos.capacity() / 2);
+        GLES20.glDrawArrays(GLES20.GL_LINE_LOOP, 0, vpos.capacity() / 2);
         GLES20.glDisableVertexAttribArray(vposx);
         GLES20.glUseProgram(0);
     }
